@@ -19,10 +19,10 @@ public class EmployeeBookImpl implements EmployeeBook {
     public Employee add(String firstName, String lastName, double salary, int department) {
         Employee employee = new Employee(firstName, lastName, salary, department);
 
-        if (employees.containsKey(employee.getKeyEmp())) {
+        if (employees.containsKey(employee.KeyEmp())) {
             throw new EmployeeAlreadyInList("Указанный сотрудник уже есть в мап");
         }
-        employees.put(employee.getKeyEmp(), employee);
+        employees.put(employee.KeyEmp(), employee);
         return employee;
 
 
@@ -31,9 +31,9 @@ public class EmployeeBookImpl implements EmployeeBook {
     @Override
     public Employee remove(String firstName, String lastName, double salary, int departament) {
         Employee employee = new Employee(firstName, lastName, salary, departament);
-        boolean b = employees.containsKey(employee.getKeyEmp());
+        boolean b = employees.containsKey(employee.KeyEmp());
         if (b) {
-            employees.remove(employee.getKeyEmp());
+            employees.remove(employee.KeyEmp());
             return employee;
         }
         throw new EmployeeNotFound("Сотрудник не найден ");
@@ -42,7 +42,7 @@ public class EmployeeBookImpl implements EmployeeBook {
     @Override
     public Employee find(String firstName, String lastName, double salary, int departament) {
         Employee employee = new Employee(firstName, lastName, salary, departament);
-        boolean b = employees.containsKey(employee.getKeyEmp());
+        boolean b = employees.containsKey(employee.KeyEmp());
         if (b) {
             return employee;
         }

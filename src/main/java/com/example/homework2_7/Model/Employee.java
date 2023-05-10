@@ -30,7 +30,7 @@ public class Employee {
         return department;
     }
 
-    public String getKeyEmp() {
+    public String KeyEmp() {
         return firstname + "  " + lastname;
     }
 
