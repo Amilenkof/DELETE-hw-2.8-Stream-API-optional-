@@ -4,8 +4,7 @@ import com.example.homework2_7.Exceptions.EmployeeAlreadyInList;
 import com.example.homework2_7.Exceptions.EmployeeNotFound;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class EmployeeBookImpl implements EmployeeBook {
@@ -54,8 +53,8 @@ public class EmployeeBookImpl implements EmployeeBook {
         return employees;
     }
 
-    public Map<String, Employee> getEmployees() {
-        return employees;
+    public HashSet<Employee> getEmployees() {
+        return new HashSet<>(employees.values());
     }
 
     public void setEmployees(Map<String, Employee> employees) {
