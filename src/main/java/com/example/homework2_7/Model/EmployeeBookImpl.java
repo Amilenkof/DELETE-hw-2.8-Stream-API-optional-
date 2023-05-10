@@ -13,7 +13,7 @@ public class EmployeeBookImpl implements EmployeeBook {
 
 
     public EmployeeBookImpl() {
-        this.employees = new HashMap<>();
+        this.employees = new HashMap<> ();
     }
 
     @Override

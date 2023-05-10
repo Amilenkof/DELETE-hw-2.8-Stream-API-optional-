@@ -32,19 +32,14 @@ public class DeptController {
 
     @GetMapping("/max-salary")
     public Employee getEmployeeMaxSalary(@RequestParam("departmentId") int department) {
-        try {
+
             return deptEmployeeService.getEmployeeMaxSalary(department);
-        } catch (EmployeeNotFound exp) {
-            throw new RuntimeException(exp);
-        }
+
     }
 
     @GetMapping("/min-salary")
     public Employee getEmployeeMinSalary(@RequestParam("departmentId") int department) {
-        try {
             return deptEmployeeService.getEmployeeMinSalary(department);
-        } catch (EmployeeNotFound exp) {
-            throw new RuntimeException(exp);
-        }
+
     }
 }

@@ -5,5 +5,5 @@ public interface EmployeeBook {
 
     Employee remove(String firstName, String lastName,double salary,int departament);
 
-    Employee find(String firstName, String lastName,double salary,int departament);
+    Employee find(String firstName, String lastName,double salary,int departament );
 }
